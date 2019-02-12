@@ -4,16 +4,18 @@
              x:Class="TrainingApp.Pages.QuotesPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"
-                    Android="20, 30, 20, 20">
+                    Android="20, 30, 20, 20"
+                    iOS="0, 30, 0, 0">
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
+        <BoxView Color="Green" Opacity="{Binding 
+            Source={x:Reference slider}, 
+			Path=Value}"/>
         <Button Text="Next" Clicked="Handle_Clicked" />
-        <Label 
-            Text="{Binding 
-			Source={x:Reference slider}, 
-			Path=Value, 
-			StringFormat='Font Size: {0:N0}'}" />
+        <Label BindingContext="{x:Reference slider}"
+            Text="{Binding Value, StringFormat='Font Size: {0:N0}'}" 
+            Opacity="{Binding Value}"/>
         <Slider 
             x:Name="slider" 
             Maximum="50" 

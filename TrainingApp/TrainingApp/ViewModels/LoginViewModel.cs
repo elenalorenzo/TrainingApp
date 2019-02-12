@@ -8,6 +8,7 @@ namespace TrainingApp.ViewModels
     internal class LoginViewModel : INotifyPropertyChanged
     {
         public Action DisplayInvalidLoginPrompt;
+        public Action DisplayValidLoginPrompt;
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private string _email;
         private string _password;
@@ -41,9 +42,13 @@ namespace TrainingApp.ViewModels
 
         public void OnSubmit()
         {
-            if (_email != "xamarin@training.com" || _password != "password")
+            if (_email != "Email" || _password != "Password")
             {
                 DisplayInvalidLoginPrompt();
+            }
+            else
+            {
+                DisplayValidLoginPrompt();
             }
         }
     }

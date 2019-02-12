@@ -13,8 +13,9 @@ namespace TrainingApp.Pages
 		    var loginViewModel = new LoginViewModel();
 		    BindingContext = loginViewModel;
 		    loginViewModel.DisplayInvalidLoginPrompt += () => DisplayAlert("Error", "Invalid Login, try again", "OK");
+		    loginViewModel.DisplayValidLoginPrompt += () => DisplayAlert("Success", "Welcome to Xamarin.Forms", "OK");
 
-		    InitializeComponent();
+            InitializeComponent();
 
 		    Email.Completed += (object sender, EventArgs e) =>
 		    {

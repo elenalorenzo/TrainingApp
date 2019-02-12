@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingApp.Pages.IconPage">
+    <StackLayout>
+        <Button Image="clock.png" x:Name="clockIcon" />
+        <Button x:Name="xamlClockIcon">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            iOS="clock.png"
+                            Android="clock.png"/>
+            </Button.Image>
+        </Button>
+    </StackLayout>
+</ContentPage>
