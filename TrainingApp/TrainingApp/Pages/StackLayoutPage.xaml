@@ -1,21 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TrainingApp.MarkupExtensions"
              x:Class="TrainingApp.Pages.StackLayoutPage">
     <ContentPage.Padding> 
-        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0">
+        <OnPlatform x:TypeArguments="Thickness" 
+                    iOS="0, 30, 0, 0">
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
         <StackLayout Padding="10">
             <Label Text="Paris and the cello artist" />
         </StackLayout>
-        <Image Source="https://cdn.pixabay.com/photo/2016/10/01/05/39/paris-1706910_960_720.jpg" />
-        <StackLayout Orientation="Horizontal" Spacing="20" Padding="10, 0">
+        <Image Source="{local:EmbeddedImage TrainingApp.Images.paris-1706910_960_720.jpg}" />
+        <StackLayout Orientation="Horizontal" Spacing="20" Padding="20, 20, 20, 20">
             <Button Text="Like" />
             <Button Text="Comment" />
             <Button Text="Share" />
         </StackLayout>
+
         <StackLayout Padding="10">
             <BoxView HeightRequest="1" Color="#f0f0f0" />
             <Label Text="700 likes" FontAttributes="Bold" />

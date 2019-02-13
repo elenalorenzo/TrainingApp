@@ -8,7 +8,7 @@
                     iOS="0, 30, 0, 0">
         </OnPlatform>
     </ContentPage.Padding>
-    <StackLayout>
+    <StackLayout x:Name="test">
         <BoxView Color="Green" Opacity="{Binding 
             Source={x:Reference slider}, 
 			Path=Value}"/>

@@ -5,23 +5,23 @@
     <RelativeLayout>
         <BoxView BackgroundColor="#f7f7f7" x:Name="banner"
                  RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.3}"
+				    Type=RelativeToParent,
+				    Property=Height,
+				    Factor=0.3}"
                  RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}" />
+				    Type=RelativeToParent,
+				    Property=Width,
+				    Factor=1}" />
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center"
                      RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1}"
+				        Type=RelativeToParent,
+				        Property=Width,
+				        Factor=1}"
 				
                      RelativeLayout.HeightConstraint="{ConstraintExpression 
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.3}">
+				        Type=RelativeToParent,
+				        Property=Height,
+				        Factor=0.3}">
             <Label Text="$11.95" TextColor="#33353a" FontSize="60" FontAttributes="Bold" />
             <Button Text="Add $7.99 Credit" BackgroundColor="#1695a3" BorderRadius="15" HeightRequest="40" FontSize="15" FontAttributes="Bold" TextColor="White" />
         </StackLayout>

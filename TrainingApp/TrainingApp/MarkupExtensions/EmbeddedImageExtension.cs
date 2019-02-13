@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 namespace TrainingApp.MarkupExtensions
 {
     [ContentProperty("ResourceId")]
-    class EmbeddedImage : IMarkupExtension
+    class EmbeddedImageExtension : IMarkupExtension
     {
         public string ResourceId { get; set; }
         public object ProvideValue(IServiceProvider serviceProvider)

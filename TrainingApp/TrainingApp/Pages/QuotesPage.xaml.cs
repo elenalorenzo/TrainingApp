@@ -16,8 +16,8 @@ namespace TrainingApp.Pages
 	    };
 
         public QuotesPage ()
-		{
-			InitializeComponent ();
+        {
+		    InitializeComponent ();
 		    currentQuote.Text = _quotes[_index];
         }
 

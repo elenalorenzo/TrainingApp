@@ -25,7 +25,7 @@ namespace TrainingApp.Pages
 
 	    void LoadImage()
 	    {
-	        image.Source = new UriImageSource
+            image.Source = new UriImageSource
 	        {
 	            Uri = new Uri($"http://lorempixel.com/1920/1080/city/{_currentImageId}"),
 	            CachingEnabled = false
