@@ -8,13 +8,11 @@
                     iOS="0, 30, 0, 0">
         </OnPlatform>
     </ContentPage.Padding>
-    <StackLayout x:Name="test">
-        <BoxView Color="Green" Opacity="{Binding 
-            Source={x:Reference slider}, 
-			Path=Value}"/>
+    <StackLayout BindingContext="{x:Reference slider}">
+        <BoxView Color="Green" Opacity="{Binding Value}"/>
         <Button Text="Next" Clicked="Handle_Clicked" />
-        <Label BindingContext="{x:Reference slider}"
-            Text="{Binding Value, StringFormat='Font Size: {0:N0}'}" 
+        <Label
+            Text="{Binding Value, StringFormat='FontSize: {0:F2}'}" 
             Opacity="{Binding Value}"/>
         <Slider 
             x:Name="slider" 
@@ -22,8 +20,6 @@
             Minimum="16" />
         <Label 
             x:Name="currentQuote" 
-            FontSize="{Binding 
-			Source={x:Reference slider}, 
-			Path=Value}" />
+            FontSize="{Binding Value}" />
     </StackLayout>
 </ContentPage>

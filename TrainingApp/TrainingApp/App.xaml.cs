@@ -13,12 +13,12 @@ namespace TrainingApp
             InitializeComponent();
 
             //MainPage = new MainPage();
-            //MainPage = new QuotesPage();
+            MainPage = new QuotesPage();
             //MainPage = new LoginPage();
-            MainPage = new StackLayoutPage();
+            //MainPage = new StackLayoutPage();
             //MainPage = new GridPage();
             //MainPage = new AbsoluteLayoutPage();
-            //MainPage = new RelativeLayoutPage();
+           // MainPage = new RelativeLayoutPage();
             //MainPage = new ImagePage();
             //MainPage = new IconPage();
             //MainPage = new ActivityIndicatorPage();
