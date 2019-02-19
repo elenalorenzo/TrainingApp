@@ -1,5 +1,6 @@
 ﻿using System;
 using TrainingApp.Pages;
+using TrainingApp.Pages.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,6 +22,7 @@ namespace TrainingApp
             //MainPage = new RelativeLayoutPage();
             //MainPage = new ImagePage();
             //MainPage = new IconPage();
+            MainPage = new RoundedImagePage();
             //MainPage = new ActivityIndicatorPage();
             //MainPage = new ListPage();
             //MainPage = new ContactListPage();
@@ -29,7 +31,10 @@ namespace TrainingApp
             //MainPage = new SelectableListPage();
             //MainPage = new ContextActionsListPage();
             //MainPage = new RefreshListPage();
-            MainPage = new SearchBarListPage();
+            //MainPage = new SearchBarListPage();
+            //MainPage = new NavigationPage(new HierarchicalNavigationPage());
+            //MainPage = new NavigationPage(new ContactsPage());
+            //MainPage = new ContactMasterDetailPage();
         }
 
         protected override void OnStart()

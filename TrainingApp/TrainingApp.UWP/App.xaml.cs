@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ImageCircle.Forms.Plugin.UWP;
 
 namespace TrainingApp.UWP
 {
@@ -29,7 +30,7 @@ namespace TrainingApp.UWP
         public App()
         {
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            this.Suspending += OnSuspending; 
         }
 
         /// <summary>
@@ -53,6 +54,7 @@ namespace TrainingApp.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Xamarin.Forms.Forms.Init(e);
+                ImageCircleRenderer.Init(); // todo for the circle image plugin
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

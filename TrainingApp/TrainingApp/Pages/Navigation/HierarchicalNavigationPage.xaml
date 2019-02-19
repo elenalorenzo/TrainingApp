@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false"
+             Title="Welcome"
+             Padding="0,20,0,0"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingApp.Pages.Navigation.HierarchicalNavigationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome" HorizontalOptions="Center" />
+            <Button Text="Next" HorizontalOptions="Center" Clicked ="Handle_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
