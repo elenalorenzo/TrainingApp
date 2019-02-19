@@ -13,15 +13,23 @@ namespace TrainingApp
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new QuotesPage();
+            //MainPage = new QuotesPage();
             //MainPage = new LoginPage();
             //MainPage = new StackLayoutPage();
             //MainPage = new GridPage();
             //MainPage = new AbsoluteLayoutPage();
-           // MainPage = new RelativeLayoutPage();
+            //MainPage = new RelativeLayoutPage();
             //MainPage = new ImagePage();
             //MainPage = new IconPage();
             //MainPage = new ActivityIndicatorPage();
+            //MainPage = new ListPage();
+            //MainPage = new ContactListPage();
+            //MainPage = new FollowListPage();
+            //MainPage = new GroupListPage();
+            //MainPage = new SelectableListPage();
+            //MainPage = new ContextActionsListPage();
+            //MainPage = new RefreshListPage();
+            MainPage = new SearchBarListPage();
         }
 
         protected override void OnStart()
