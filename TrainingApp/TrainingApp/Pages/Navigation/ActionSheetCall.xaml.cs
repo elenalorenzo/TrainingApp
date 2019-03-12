@@ -10,17 +10,17 @@ using Xamarin.Forms.Xaml;
 namespace TrainingApp.Pages.Navigation
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HierarchicalNavigationPage : ContentPage
+	public partial class ActionSheetCall : ContentPage
 	{
-		public HierarchicalNavigationPage ()
+		public ActionSheetCall ()
 		{
 			InitializeComponent ();
 		}
 
 	    async void Handle_Clicked(object sender, EventArgs e)
 	    {
-	        await Navigation.PushAsync(new IntroductionPage());
-	        //await Navigation.PushModalAsync(new ModalPage());
+	        var response = await DisplayActionSheet("Title", "Cancel", "Delete", "Copy Link", "Message", "Email");
+	        await DisplayAlert("Response", response, "OK");
 	    }
-    }
+	}
 }

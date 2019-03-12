@@ -22,7 +22,7 @@ namespace TrainingApp
             //MainPage = new RelativeLayoutPage();
             //MainPage = new ImagePage();
             //MainPage = new IconPage();
-            MainPage = new RoundedImagePage();
+            //MainPage = new RoundedImagePage();
             //MainPage = new ActivityIndicatorPage();
             //MainPage = new ListPage();
             //MainPage = new ContactListPage();
@@ -35,6 +35,10 @@ namespace TrainingApp
             //MainPage = new NavigationPage(new HierarchicalNavigationPage());
             //MainPage = new NavigationPage(new ContactsPage());
             //MainPage = new ContactMasterDetailPage();
+            //MainPage = new TrainingTabbedPage();
+            //MainPage = new TrainingCarouselPage();
+            //MainPage = new ActionSheetCall();
+            MainPage = new NavigationPage(new ToolbarItemsPage());
         }
 
         protected override void OnStart()
