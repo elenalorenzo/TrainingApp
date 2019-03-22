@@ -6,5 +6,6 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Icon="clock.png" Text="New" Activated="Handle_Activated" Order="Primary"/>
         <ToolbarItem Icon="clock.png" Text="New" Activated="Handle_Activated" Order="Secondary"/>
+        <ToolbarItem Icon="clock.png" Text="Clone" Activated="Handle_Activated" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 </ContentPage>

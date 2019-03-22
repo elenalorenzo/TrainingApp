@@ -1,6 +1,7 @@
 ﻿using System;
 using TrainingApp.Pages;
 using TrainingApp.Pages.Navigation;
+using TrainingApp.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,10 +23,10 @@ namespace TrainingApp
             //MainPage = new RelativeLayoutPage();
             //MainPage = new ImagePage();
             //MainPage = new IconPage();
-            //MainPage = new RoundedImagePage();
-            //MainPage = new ActivityIndicatorPage();
+            //MainPage = new RoundedImagePage(); // todo finish
+            //MainPage = new ActivityIndicatorPage(); // todo finish
             //MainPage = new ListPage();
-            //MainPage = new ContactListPage();
+            //MainPage = new ContactListPage(); // todo fix image url
             //MainPage = new FollowListPage();
             //MainPage = new GroupListPage();
             //MainPage = new SelectableListPage();
@@ -38,7 +39,8 @@ namespace TrainingApp
             //MainPage = new TrainingTabbedPage();
             //MainPage = new TrainingCarouselPage();
             //MainPage = new ActionSheetCall();
-            MainPage = new NavigationPage(new ToolbarItemsPage());
+            //MainPage = new NavigationPage(new ToolbarItemsPage());
+            MainPage = new FormsPage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="40" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingApp.Forms.FormsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Switch IsToggled="true" Toggled="Handle_Toggled"/>
+                <Label Text="ON" x:Name="label"/>
+
+                <Switch IsToggled="true" x:Name="switch"/>
+                <Label Text="ON" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}"/>
+
+                <Slider x:Name="slider" Maximum="255" Minimum="10" Value="50" ValueChanged="Handle_ValueChanged"/>
+                <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='Value = {0:N2}'}"/>
+
+                <Stepper x:Name="stepper" Maximum="300" Minimum="0" Value="50" Increment="5"/>
+                <Label Text="{Binding Source={x:Reference stepper}, Path=Value}"/>
+
+                <Entry Keyboard="Numeric" Placeholder="Phone" />
+                <Entry IsPassword="true" Completed="Handle_Completed" TextChanged="Handle_TextChanged"/>
+                <Label x:Name="passwordLabel" />
+
+                <Editor BackgroundColor="Green" VerticalOptions="FillAndExpand"/>
+
+                <Picker x:Name="picker"
+                    Title="Select a week day"
+                    SelectedIndexChanged="Handle_PickerSelectedIndexChanged"/>
+                <Label x:Name="pickerLabel" />
+
+                <DatePicker x:Name="datePicker"
+                            Date="{x:Static sys:DateTime.Today}"
+                            Format="d MMM yyyy"
+                            MinimumDate="{x:Static sys:DateTime.Today}"
+                            MaximumDate="01/01/2020"/>
+                <TimePicker x:Name="timePicker" />
+
+                <TableView Intent="Settings">
+                    <TableRoot>
+                        <TableSection Title="Ring">
+                            <SwitchCell Text="New Voice Mail" />
+                            <SwitchCell Text="New Mail" On="true" />
+                            <ViewCell>
+                                <StackLayout>
+                                    <DatePicker Date="{x:Static sys:DateTime.Today}"
+                                                Format="d MMM yyyy"
+                                                MinimumDate="01/01/2018"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
