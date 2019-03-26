@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingApp.DataAccess.FileSystemAccess">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="editorLabel" />
+            <Editor x:Name="editor" BackgroundColor="LightGray" VerticalOptions="FillAndExpand" TextChanged="Handle_TextChanged"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
