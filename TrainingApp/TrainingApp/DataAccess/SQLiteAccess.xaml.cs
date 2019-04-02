@@ -13,23 +13,25 @@ namespace TrainingApp.DataAccess
     //[Table("Recipes")]
     public class Recipe : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [PrimaryKey, AutoIncrement/*, Column("RecipeId")*/]
+        [PrimaryKey, AutoIncrement, /*Column("RecipeId")*/]
         public int Id { get; set; }
 
         private string _name;
 
         [MaxLength(255)]
-        public string Name { get => _name;
+        public string Name
+        {
+            get => _name;
             set
             {
-                if(_name == value) 
+                if (_name == value)
                     return;
                 _name = value;
                 OnPropertyChanged(nameof(Name));
             }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

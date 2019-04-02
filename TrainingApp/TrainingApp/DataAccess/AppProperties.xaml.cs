@@ -18,10 +18,10 @@ namespace TrainingApp.DataAccess
 		    BindingContext = Application.Current;
 		}
 
-	    //protected override void OnDisappearing()
-	    //{
+        //protected override void OnDisappearing()
+        //{
         //    base.OnDisappearing();
-	    //}
+        //}
 
         //private void OnChanged(object sender, EventArgs e)
         //{

@@ -3,6 +3,7 @@ using TrainingApp.DataAccess;
 using TrainingApp.Pages;
 using TrainingApp.Pages.Navigation;
 using TrainingApp.Forms;
+using TrainingApp.MVVMPages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,8 +12,8 @@ namespace TrainingApp
 {
     public partial class App : Application
     {
-        private const string TitleKey = "Name";
-        private const string NotificationsEnabledKey = "NotificationsEnabled";
+        //private const string TitleKey = "Name";
+        //private const string NotificationsEnabledKey = "NotificationsEnabled";
 
         public App()
         {
@@ -53,24 +54,27 @@ namespace TrainingApp
             //MainPage = new AppProperties();
             //MainPage = new FileSystemAccess();
             //MainPage = new SQLiteAccess();
-            MainPage = new WebServices();
+            //MainPage = new WebServices();
 
             #endregion
+
+            MainPage = new NavigationPage(new PlaylistsPage());
+            //MainPage = new NavigationPage(new PlaylistsPageMVVM());
         }
 
-        public string Title
-        {
-            get => Properties.ContainsKey(TitleKey) 
-                ? Properties[TitleKey].ToString() 
-                : "";
-            set => Properties[TitleKey] = value;
-        }
+        //public string Title
+        //{
+        //    get => Properties.ContainsKey(TitleKey) 
+        //        ? Properties[TitleKey].ToString() 
+        //        : "";
+        //    set => Properties[TitleKey] = value;
+        //}
 
-        public bool NotificationsEnabled
-        {
-            get => Properties.ContainsKey(NotificationsEnabledKey) && (bool)Properties[NotificationsEnabledKey];
-            set => Properties[NotificationsEnabledKey] = value;
-        }
+        //public bool NotificationsEnabled
+        //{
+        //    get => Properties.ContainsKey(NotificationsEnabledKey) && (bool)Properties[NotificationsEnabledKey];
+        //    set => Properties[NotificationsEnabledKey] = value;
+        //}
 
         protected override void OnStart()
         {
